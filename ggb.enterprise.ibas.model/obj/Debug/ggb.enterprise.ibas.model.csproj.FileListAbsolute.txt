@@ -1,0 +1,15 @@
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\ggb.enterprise.ibas.model.dll
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\ggb.enterprise.ibas.model.pdb
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\EntityFramework.dll
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\ggb.enterprise.ibas.common.dll
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\AutoMapper.dll
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\Newtonsoft.Json.dll
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\EntityFramework.xml
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\ggb.enterprise.ibas.common.pdb
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\AutoMapper.xml
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\Newtonsoft.Json.xml
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\obj\Debug\ggb.enterprise.ibas.model.csprojResolveAssemblyReference.cache
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\obj\Debug\ggb.enterprise.ibas.model.dll
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\obj\Debug\ggb.enterprise.ibas.model.pdb

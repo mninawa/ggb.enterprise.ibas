@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAC1F2C7-A908-4C59-A43E-F38DF3B52255}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ggb.enterprise.ibas.applicationservice</RootNamespace>
+    <AssemblyName>ggb.enterprise.ibas.applicationservice</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ggb.enterprise.ibas.common">
+      <HintPath>..\..\..\Users\mninawamkoko\source\repos\ggb.enterprise.ibas.baseframework\ggb.enterprise.ibas.common\bin\Debug\ggb.enterprise.ibas.common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\ServiceResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Contract\IEnum_listService.cs" />
+    <Compile Include="Service\Contract\IPersonService.cs" />
+    <Compile Include="Service\Contract\IUserService.cs" />
+    <Compile Include="Service\Contract\IUser_deviceService.cs" />
+    <Compile Include="Service\Enum_listService.cs" />
+    <Compile Include="Service\PersonService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Service\User_deviceService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ggb.enterprise.ibas.data\ggb.enterprise.ibas.data.csproj">
+      <Project>{4bf97cf6-f5fb-4dfe-bc3a-4daf07853233}</Project>
+      <Name>ggb.enterprise.ibas.data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ggb.enterprise.ibas.model\ggb.enterprise.ibas.model.csproj">
+      <Project>{da69706e-f5d9-46ee-b234-a9ed5d4391ea}</Project>
+      <Name>ggb.enterprise.ibas.model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
