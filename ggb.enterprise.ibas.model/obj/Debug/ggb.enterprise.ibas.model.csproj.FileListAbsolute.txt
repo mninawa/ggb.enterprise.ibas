@@ -13,3 +13,4 @@ C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\bin\Debug\Newtonsoft.Js
 C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\obj\Debug\ggb.enterprise.ibas.model.csprojResolveAssemblyReference.cache
 C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\obj\Debug\ggb.enterprise.ibas.model.dll
 C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\obj\Debug\ggb.enterprise.ibas.model.pdb
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.model\obj\Debug\ggb.enterprise.ibas.model.csproj.CoreCompileInputs.cache

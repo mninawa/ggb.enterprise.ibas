@@ -1,10 +1,15 @@
-using System.ComponentModel.DataAnnotations;
-using System.Data.Entity.ModelConfiguration;
-
 namespace ggb.enterprise.ibas.model.Models
 {
+    using System.Data.Entity.ModelConfiguration;
+
+    /// <summary>
+    /// Defines the <see cref="PersonMap" />
+    /// </summary>
     public class PersonMap : EntityTypeConfiguration<Person>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PersonMap"/> class.
+        /// </summary>
         public PersonMap()
         {
             // Primary Key
@@ -13,25 +18,26 @@ namespace ggb.enterprise.ibas.model.Models
             // Properties
             this.Property(t => t.Surname)
                 .IsRequired()
-                .HasMaxLength(50);
+ .HasMaxLength(50);
 
             this.Property(t => t.First_name)
                 .IsRequired()
-                .HasMaxLength(50);
+ .HasMaxLength(50);
 
             this.Property(t => t.Initials)
                 .IsRequired()
-                .HasMaxLength(10);
+ .HasMaxLength(10);
 
             this.Property(t => t.Alias_name)
                 .IsRequired()
-                .HasMaxLength(50);
+ .HasMaxLength(50);
 
             this.Property(t => t.Maiden_name)
                 .HasMaxLength(50);
 
             this.Property(t => t.Pers_place_birth)
-                .HasMaxLength(50);
+                .IsRequired()
+ .HasMaxLength(50);
 
             this.Property(t => t.Complexion)
                 .HasMaxLength(20);
@@ -68,10 +74,6 @@ namespace ggb.enterprise.ibas.model.Models
 
             this.Property(t => t.CC_code)
                 .HasMaxLength(10);
-
-            this.Property(t => t.Millatary_ind)
-                .IsFixedLength()
-                .HasMaxLength(1);
 
             this.Property(t => t.Income_tax_num)
                 .HasMaxLength(20);

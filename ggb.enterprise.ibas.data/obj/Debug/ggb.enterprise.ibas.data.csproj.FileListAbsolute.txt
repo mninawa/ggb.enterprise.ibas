@@ -16,3 +16,4 @@ C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.data\bin\Debug\EntityFramewor
 C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.data\bin\Debug\ggb.enterprise.ibas.common.pdb
 C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.data\bin\Debug\AutoMapper.xml
 C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.data\bin\Debug\Newtonsoft.Json.xml
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.data\obj\Debug\ggb.enterprise.ibas.data.csproj.CoreCompileInputs.cache

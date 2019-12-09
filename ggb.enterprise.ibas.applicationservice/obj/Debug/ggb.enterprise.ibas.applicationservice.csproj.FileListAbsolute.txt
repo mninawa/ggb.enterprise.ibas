@@ -17,3 +17,5 @@ C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.applicationservice\bin\Debug\
 C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.applicationservice\bin\Debug\EntityFramework.SqlServer.xml
 C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.applicationservice\obj\Debug\ggb.enterprise.ibas.applicationservice.dll
 C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.applicationservice\obj\Debug\ggb.enterprise.ibas.applicationservice.pdb
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.applicationservice\obj\Debug\ggb.enterprise.ibas.applicationservice.csproj.CoreCompileInputs.cache
+C:\Project\ggb.enterprise.ibas\ggb.enterprise.ibas.applicationservice\bin\Debug\ggb.enterprise.ibas.data.dll.config

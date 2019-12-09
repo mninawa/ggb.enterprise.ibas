@@ -1,30 +1,53 @@
-
-using System;
-using System.Collections.Generic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using ggb.enterprise.ibas.applicationservice.Helpers;
-using ggb.enterprise.ibas.common.data;
-using ggb.enterprise.ibas.common.model;
-using ggb.enterprise.ibas.common.model.Enum;
-using ggb.enterprise.ibas.data.Repositories;
-using ggb.enterprise.ibas.common.data.extensions;
-using ggb.enterprise.ibas.common.model.Dto;
-using ggb.enterprise.ibas.applicationservice.Contract;
-using ggb.enterprise.ibas.model.Models;
 namespace ggb.enterprise.ibas.applicationservice.Contract
 {
+    using ggb.enterprise.ibas.applicationservice.Helpers;
+    using ggb.enterprise.ibas.common.model.Dto;
+    using ggb.enterprise.ibas.model.Models;
 
-	public interface IUserService 
+    /// <summary>
+    /// Defines the <see cref="IUserService" />
+    /// </summary>
+    public interface IUserService
     {
-
+        /// <summary>
+        /// The GetUser
+        /// </summary>
+        /// <returns>The <see cref="ServiceResult"/></returns>
         ServiceResult GetUser();
-        ServiceResult GetUser(int id);
-        ServiceResult GetCount(Refining refining);
-        ServiceResult GetUser(Refining refining);
-        ServiceResult Save(User entity);
-        ServiceResult Delete(User entity);
 
+        /// <summary>
+        /// The GetUser
+        /// </summary>
+        /// <param name="id">The id<see cref="int"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        ServiceResult GetUser(int id);
+
+        /// <summary>
+        /// The GetCount
+        /// </summary>
+        /// <param name="refining">The refining<see cref="Refining"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        ServiceResult GetCount(Refining refining);
+
+        /// <summary>
+        /// The GetUser
+        /// </summary>
+        /// <param name="refining">The refining<see cref="Refining"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        ServiceResult GetUser(Refining refining);
+
+        /// <summary>
+        /// The Save
+        /// </summary>
+        /// <param name="entity">The entity<see cref="User"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        ServiceResult Save(User entity);
+
+        /// <summary>
+        /// The Delete
+        /// </summary>
+        /// <param name="entity">The entity<see cref="User"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        ServiceResult Delete(User entity);
     }
- }
+}

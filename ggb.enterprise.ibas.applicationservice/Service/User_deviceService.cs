@@ -1,50 +1,77 @@
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using ggb.enterprise.ibas.applicationservice.Helpers;
-using ggb.enterprise.ibas.common.data;
-using ggb.enterprise.ibas.common.model;
-using ggb.enterprise.ibas.common.model.Enum;
-using ggb.enterprise.ibas.data.Repositories;
-using ggb.enterprise.ibas.common.data.extensions;
-using ggb.enterprise.ibas.common.model.Dto;
-using ggb.enterprise.ibas.applicationservice.Contract;
-using ggb.enterprise.ibas.model.Models;
-
 namespace ggb.enterprise.ibas.applicationservice.Service
 {
-	public class User_deviceService : IUser_deviceService
+    using ggb.enterprise.ibas.applicationservice.Contract;
+    using ggb.enterprise.ibas.applicationservice.Helpers;
+    using ggb.enterprise.ibas.common.model.Dto;
+    using ggb.enterprise.ibas.data.Repositories;
+    using ggb.enterprise.ibas.model.Models;
+    using System;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="User_deviceService" />
+    /// </summary>
+    public class User_deviceService : IUser_deviceService
     {
-		private readonly IUser_deviceRepository _repository;
-       
-        public User_deviceService(IUser_deviceRepository repository)          
+        /// <summary>
+        /// Defines the _repository
+        /// </summary>
+        private readonly IUser_deviceRepository _repository;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="User_deviceService"/> class.
+        /// </summary>
+        /// <param name="repository">The repository<see cref="IUser_deviceRepository"/></param>
+        public User_deviceService(IUser_deviceRepository repository)
         {
             _repository = repository;
         }
 
-		public ServiceResult GetUser_device()
-		{
+        /// <summary>
+        /// The GetUser_device
+        /// </summary>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        public ServiceResult GetUser_device()
+        {
             return new ServiceResult(true) { Data = _repository.GetAll().AsQueryable() };
-		}
+        }
 
+        /// <summary>
+        /// The GetUser_device
+        /// </summary>
+        /// <param name="id">The id<see cref="int"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
         public ServiceResult GetUser_device(int id)
         {
             return new ServiceResult(true) { Data = _repository.Get(x => x.Identifier == id) };
         }
 
+        /// <summary>
+        /// The GetCount
+        /// </summary>
+        /// <param name="refining">The refining<see cref="Refining"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
         public ServiceResult GetCount(Refining refining)
         {
             return new ServiceResult(true) { Data = _repository.GetCount(refining) };
         }
 
-
-		public ServiceResult GetUser_device(Refining refining)
+        /// <summary>
+        /// The GetUser_device
+        /// </summary>
+        /// <param name="refining">The refining<see cref="Refining"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        public ServiceResult GetUser_device(Refining refining)
         {
             return new ServiceResult(true) { Data = _repository.GetMany(refining) };
         }
 
-		public  ServiceResult Save(User_device entity)
+        /// <summary>
+        /// The Save
+        /// </summary>
+        /// <param name="entity">The entity<see cref="User_device"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        public ServiceResult Save(User_device entity)
         {
             try
             {
@@ -61,7 +88,12 @@ namespace ggb.enterprise.ibas.applicationservice.Service
             }
         }
 
-		public ServiceResult Delete(User_device entity)
+        /// <summary>
+        /// The Delete
+        /// </summary>
+        /// <param name="entity">The entity<see cref="User_device"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        public ServiceResult Delete(User_device entity)
         {
             try
             {
@@ -73,5 +105,5 @@ namespace ggb.enterprise.ibas.applicationservice.Service
                 return new ServiceResult(false) { Error = ex.ToString() };
             }
         }
-	}
+    }
 }

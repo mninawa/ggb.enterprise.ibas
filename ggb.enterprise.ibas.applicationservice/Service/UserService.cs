@@ -1,50 +1,77 @@
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using ggb.enterprise.ibas.applicationservice.Helpers;
-using ggb.enterprise.ibas.common.data;
-using ggb.enterprise.ibas.common.model;
-using ggb.enterprise.ibas.common.model.Enum;
-using ggb.enterprise.ibas.data.Repositories;
-using ggb.enterprise.ibas.common.data.extensions;
-using ggb.enterprise.ibas.common.model.Dto;
-using ggb.enterprise.ibas.applicationservice.Contract;
-using ggb.enterprise.ibas.model.Models;
-
 namespace ggb.enterprise.ibas.applicationservice.Service
 {
-	public class UserService :  IUserService
+    using ggb.enterprise.ibas.applicationservice.Contract;
+    using ggb.enterprise.ibas.applicationservice.Helpers;
+    using ggb.enterprise.ibas.common.model.Dto;
+    using ggb.enterprise.ibas.data.Repositories;
+    using ggb.enterprise.ibas.model.Models;
+    using System;
+    using System.Linq;
+
+    /// <summary>
+    /// Defines the <see cref="UserService" />
+    /// </summary>
+    public class UserService : IUserService
     {
-		private readonly IUserRepository _repository;
-       
-        public UserService(IUserRepository repository)          
+        /// <summary>
+        /// Defines the _repository
+        /// </summary>
+        private readonly IUserRepository _repository;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserService"/> class.
+        /// </summary>
+        /// <param name="repository">The repository<see cref="IUserRepository"/></param>
+        public UserService(IUserRepository repository)
         {
             _repository = repository;
         }
 
-		public ServiceResult GetUser()
-		{
+        /// <summary>
+        /// The GetUser
+        /// </summary>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        public ServiceResult GetUser()
+        {
             return new ServiceResult(true) { Data = _repository.GetAll().AsQueryable() };
-		}
+        }
 
+        /// <summary>
+        /// The GetUser
+        /// </summary>
+        /// <param name="id">The id<see cref="int"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
         public ServiceResult GetUser(int id)
         {
             return new ServiceResult(true) { Data = _repository.Get(x => x.Identifier == id) };
         }
 
+        /// <summary>
+        /// The GetCount
+        /// </summary>
+        /// <param name="refining">The refining<see cref="Refining"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
         public ServiceResult GetCount(Refining refining)
         {
             return new ServiceResult(true) { Data = _repository.GetCount(refining) };
         }
 
-
-		public ServiceResult GetUser(Refining refining)
+        /// <summary>
+        /// The GetUser
+        /// </summary>
+        /// <param name="refining">The refining<see cref="Refining"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        public ServiceResult GetUser(Refining refining)
         {
             return new ServiceResult(true) { Data = _repository.GetMany(refining) };
         }
 
-		public  ServiceResult Save(User entity)
+        /// <summary>
+        /// The Save
+        /// </summary>
+        /// <param name="entity">The entity<see cref="User"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        public ServiceResult Save(User entity)
         {
             try
             {
@@ -61,7 +88,12 @@ namespace ggb.enterprise.ibas.applicationservice.Service
             }
         }
 
-		public ServiceResult Delete(User entity)
+        /// <summary>
+        /// The Delete
+        /// </summary>
+        /// <param name="entity">The entity<see cref="User"/></param>
+        /// <returns>The <see cref="ServiceResult"/></returns>
+        public ServiceResult Delete(User entity)
         {
             try
             {
@@ -73,5 +105,5 @@ namespace ggb.enterprise.ibas.applicationservice.Service
                 return new ServiceResult(false) { Error = ex.ToString() };
             }
         }
-	}
+    }
 }
